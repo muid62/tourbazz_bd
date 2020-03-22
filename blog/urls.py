@@ -15,8 +15,8 @@ Including another URLconf
 """
 
 from django.urls import path
-from.views import news
+from.views import packages
 
 urlpatterns = [
-    path('news',news,name="news"),
+    path('packages',packages,name="packages"),
 ]
