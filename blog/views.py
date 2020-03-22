@@ -7,3 +7,4 @@ def packages(request):
         'data': data
     }
     return render(request,'blog/blog.html', context)
+
