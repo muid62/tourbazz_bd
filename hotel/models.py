@@ -41,6 +41,7 @@ class Hotel(models.Model):
     is_published = models.BooleanField(default=True)
     list_date = models.DateTimeField(default=datetime.now, blank=True)
 
+
     def __str__(self):
         return self.name
 
