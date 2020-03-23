@@ -1,1 +1,0 @@
-# tourbazz_bd
