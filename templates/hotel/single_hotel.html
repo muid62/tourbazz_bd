@@ -1,4 +1,4 @@
-{% extends 'base_hotel.html' %}
+{% extends 'base_single.html' %}
 {% load static %}
 {% block title %}Tourbazz | Single Hotel{% endblock %}
 {% block content %}
@@ -9,7 +9,7 @@
 	<div class="home">
 		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/single_background.jpg"><img src="{% static 'images/single_background.jpg' %}" alt=""></div>
 		<div class="home_content">
-			<div class="home_title">the offers</div>
+			<div class="home_title">The Hotels</div>
 		</div>
 	</div>
 
@@ -387,8 +387,8 @@
 
 										<!-- Hotel Gallery Slider Item -->
 										<div class="owl-item">
-											<a class="colorbox cboxElement" href="listing_gallery_1.jpg">
-												<img src="listing_gallery_1.jpg" alt="https://unsplash.com/@jbriscoe">
+											<a class="colorbox cboxElement" href="{% static 'images/listing_1.jpg' %}">
+												<img src="{% static 'images/listing_thumb_1.jpg' %}" alt="https://unsplash.com/@jbriscoe">
 											</a>
 										</div>
 
