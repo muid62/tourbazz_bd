@@ -1,0 +1,107 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+
+{% block branding %}
+    <h1 id="head">
+       <img src="{% static 'images/logo.png' %}" alt="Tourbazz_bd" id="img"> Tourbazz Admin Area
+    </h1>
+{% endblock %}
+{% block extrastyle %}
+    <style>
+
+    #head{
+        font-weight: bolder;
+    }
+    #img{
+        margin-right: 20px;
+    }
+     #header {
+        background: #31124b;
+        color: #fff;
+                }
+    #branding h1{
+        color: #fff;
+                }
+    a:link,
+    a:visited{
+        color: #31124b;
+
+    }
+    div.breadcrumbs {
+        background: #fa9e1b;
+        color: #31124b;
+        border-radius: 0 0 20px 20px ;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    div.breadcrumbs a{
+        color: #31124b;
+        padding: 5px;
+
+    }
+    .module h2, .module caption, .inline-group h2 {
+        background: #fa9e1b;
+        border-radius: 15px 0 15px 0 ;
+        padding: 15px;
+        font-size: 13px;
+    }
+
+    .button, input[type=submit], input[type=button], .submit-row input, a.button {
+    background: #31124b;
+        color: #fff;
+    }
+    .dashboard #content {
+    width: 1000px;
+}
+
+
+    .button.default, input[type=submit].default, .submit-row input.default {
+    float: right;
+    border: none;
+    font-weight: 400;
+    background: #fa9e1b;
+}
+
+    h1 {
+    margin: 0 0 20px;
+    font-weight: 500;
+    font-size: 25px;
+    color: #31124b;
+}
+    .dashboard #content {
+    width: 60%;
+    }
+
+    .dashboard .module table th {
+    width: 100%;
+        font-size: medium;
+
+}
+    #content-related .module {
+    background: none;
+    box-shadow: 5px 5px 40px #fa9e1b;
+}
+
+    a:link, a:visited {
+    color: #31124b;
+        font-size: 17px;
+
+}
+
+    #header a:link, #header a:visited {
+    color: #fff;
+        font-size: 14px;
+}
+
+    #user-tools {
+    float: right;
+    padding: 0;
+    margin: 0 0 0 20px;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-align: right;
+}
+    </style>
+{% endblock %}

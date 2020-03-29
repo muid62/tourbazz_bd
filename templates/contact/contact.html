@@ -1,0 +1,109 @@
+{% extends 'base_contact.html' %}
+{% load static %}
+{% block title %}Tourbazz | Contact{% endblock %}
+{% block content %}
+
+
+
+    <div class="home">
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/contact_background.jpg' %}"><img src="{% static 'images/contact_background.jpg' %}"></div>
+		<div class="home_content">
+			<div class="home_title">contact</div>
+		</div>
+	</div>
+
+	<!-- Contact -->
+    <!--Alert -->
+    {% include 'partial/_alerts.html' %}
+
+	<div class="contact_form_section">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+
+					<!-- Contact Form -->
+					<div class="contact_form_container">
+						<div class="contact_title text-center">get in touch</div>
+						<form action="{% url 'contact' %}" id="contact_form" class="contact_form text-center" method="POST">
+                            {% csrf_token %}
+							<input name="name" type="text" id="contact_form_name" class="contact_form_name input_field" placeholder="Name" required="required" data-error="Name is required." {% if user.is_authenticated %} value="{{ user.first_name }} {{ user.last_name }}" {% endif %}>
+							<input name ="email" type="text" id="contact_form_email" class="contact_form_email input_field" placeholder="E-mail" required="required" data-error="Email is required." {% if user.is_authenticated %} value="{{ user.email }}" {% endif %}>
+							<input name ="subject"type="text" id="contact_form_subject" class="contact_form_subject input_field" placeholder="Subject" required="required" data-error="Subject is required.">
+							<input id="contact_form_message" class="text_field contact_form_message" name="message" rows="4" placeholder="Message" required="required" data-error="Please, write us a message.">
+							<button type="submit" id="form_submit_button" class="form_submit_button button trans_200">send message<span></span><span></span><span></span></button>
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- About -->
+	<div class="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5">
+
+					<!-- About - Image -->
+
+					<div class="about_image">
+						<img src="{% static 'images/man.png' %}" alt="">
+					</div>
+
+				</div>
+
+				<div class="col-lg-4">
+
+					<!-- About - Content -->
+
+					<div class="about_content">
+						<div class="logo_container about_logo">
+							<div class="logo"><a href="#"><img src="{% static 'images/logo.png' %}" alt="">travelix</a></div>
+						</div>
+						<p class="about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis vu lputate eros, iaculis consequat nisl. Nunc et suscipit urna. Integer eleme ntum orci eu vehicula iaculis consequat nisl. Nunc et suscipit urna pretium.</p>
+						<ul class="about_social_list">
+							<li class="about_social_item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+							<li class="about_social_item"><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+							<li class="about_social_item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li class="about_social_item"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+							<li class="about_social_item"><a href="#"><i class="fa fa-behance"></i></a></li>
+						</ul>
+					</div>
+
+				</div>
+
+				<div class="col-lg-3">
+
+					<!-- About Info -->
+
+					<div class="about_info">
+						<ul class="contact_info_list">
+							<li class="contact_info_item d-flex flex-row">
+								<div><div class="contact_info_icon"><img src="{% static 'images/placeholder.svg' %}" alt=""></div></div>
+								<div class="contact_info_text">4127 Raoul Wallenber 45b-c Gibraltar</div>
+							</li>
+							<li class="contact_info_item d-flex flex-row">
+								<div><div class="contact_info_icon"><img src="{% static 'images/phone-call.svg' %}" alt=""></div></div>
+								<div class="contact_info_text">2556-808-8613</div>
+							</li>
+							<li class="contact_info_item d-flex flex-row">
+								<div><div class="contact_info_icon"><img src="{% static 'images/message.svg' %}" alt=""></div></div>
+								<div class="contact_info_text"><a href="mailto:contactme@gmail.com?Subject=Hello" target="_top">contactme@gmail.com</a></div>
+							</li>
+							<li class="contact_info_item d-flex flex-row">
+								<div><div class="contact_info_icon"><img src="{% static 'images/planet-earth.svg' %}" alt=""></div></div>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+{% endblock %}
