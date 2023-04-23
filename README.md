@@ -1,3 +1,3 @@
 # tourbazz_bd
 
-This is a intelegent tour manager.
+This is an intelegent tour manager.
