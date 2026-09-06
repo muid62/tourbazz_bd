@@ -16,7 +16,7 @@
 				<!-- Slider Item -->
 				<div class="owl-item home_slider_item ">
 					<!-- Image by https://unsplash.com/@anikindimitry -->
-					<div class="home_slider_background" style="background-image:url({% static 'images/Riu-Palace-Saint-Martin.jpg' %})"></div>
+					<div class="home_slider_background" style="background-image:url(&quot;{% static 'images/Riu-Palace-Saint-Martin.jpg' %}&quot;)"></div>
 
 					<div class="home_slider_content text-center">
 						<div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
@@ -29,7 +29,7 @@
 
 				<!-- Slider Item -->
 				<div class="owl-item home_slider_item">
-					<div class="home_slider_background" style="background-image:url({% static 'images/slider2.jpg' %})"></div>
+					<div class="home_slider_background" style="background-image:url(&quot;{% static 'images/slider2.jpg' %}&quot;)"></div>
 
 					<div class="home_slider_content text-center">
 						<div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
@@ -42,7 +42,7 @@
 
 				<!-- Slider Item -->
 				<div class="owl-item home_slider_item">
-					<div class="home_slider_background" style="background-image:url({% static 'images/tour.jpg' %})"></div>
+					<div class="home_slider_background" style="background-image:url(&quot;{% static 'images/tour.jpg' %}&quot;)"></div>
 
 					<div class="home_slider_content text-center">
 						<div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
@@ -389,7 +389,7 @@
 					<div class="intro_item">
 						<div class="intro_item_overlay"></div>
 						<!-- Image by https://unsplash.com/@dnevozhai -->
-						<div class="intro_item_background" style="background-image:url({{ package.main_photo.url }})"></div>
+						<div class="intro_item_background" style="background-image:url(&quot;{{ package.main_photo.url }}&quot;)"></div>
 						<div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
 							<div class="intro_date">{{ package.date | naturalday }}</div>
 							<div class="button intro_button"><div class="button_bcg"></div><a href="{% url 'single_blog' package.id %}">see more<span></span><span></span><span></span></a></div>
@@ -420,7 +420,7 @@
 
 	<div class="cta">
 		<!-- Image by https://unsplash.com/@thanni -->
-		<div class="cta_background" style="background-image:url({% static 'images/Riu-Palace-Saint-Martin.jpg' %})"></div>
+		<div class="cta_background" style="background-image:url(&quot;{% static 'images/Riu-Palace-Saint-Martin.jpg' %}&quot;)"></div>
 
 		<div class="container">
 			<div class="row">
@@ -517,7 +517,7 @@
 							<div class="col-lg-6">
 								<div class="offers_image_container">
 									<!-- Image by https://unsplash.com/@kensuarez -->
-									<div class="offers_image_background" style="background-image:url({{ list.main_photo.url }})"></div>
+									<div class="offers_image_background" style="background-image:url(&quot;{{ list.main_photo.url }}&quot;)"></div>
 									<div class="offer_name"><a href="{% url 'single_hotel' list.id %}">{{ list.name }}</a></div>
 								</div>
 							</div>
@@ -590,7 +590,7 @@
 	</div>
 
 	<div class="contact">
-		<div class="contact_background" style="background-image:url({% static 'images/contact.png' %})"></div>
+		<div class="contact_background" style="background-image:url(&quot;{% static 'images/contact.png' %}&quot;)"></div>
 
 		<div class="container">
 			<div class="row">
