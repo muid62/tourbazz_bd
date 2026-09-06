@@ -5,7 +5,7 @@ This is an intelligent tour manager built with Django and SQLite.
 ## Requirements
 
 - Windows
-- Python 3.8.x (the project uses Django 3.0.1)
+- Python 3.11.x (the project uses Django 5.2 LTS)
 - SQLite (included with Python)
 
 The verified Python dependencies are listed in `requirements.txt`.
@@ -21,10 +21,10 @@ python -m pip install --upgrade "pip<25.1"
 python -m pip install -r requirements.txt
 ```
 
-If `python` is not available after installing Python, use the Python 3.8 executable directly when creating the environment:
+If `python` is not available after installing Python, use the Python 3.11 executable directly when creating the environment:
 
 ```powershell
-& "$env:LocalAppData\Programs\Python\Python38\python.exe" -m venv .venv
+& "$env:LocalAppData\Programs\Python\Python311\python.exe" -m venv .venv
 ```
 
 PowerShell may block virtual-environment activation. Allow it for the current user, then activate again:
@@ -70,7 +70,7 @@ The current repository has no implemented tests, so `manage.py test` currently r
 
 ## Review notes
 
-- The project uses Django 3.0.1, which is legacy software. Keep Python 3.8 for this setup; upgrading Django should be treated as a separate compatibility task.
+- The deployment target uses Django 5.2 LTS with Python 3.11. `setuptools` is included for compatibility with packages that still use its `distutils` shim.
 - `DEBUG` is enabled and the secret key is stored in `tourbazz_bd/settings.py`; do not use these settings for production.
 - `ALLOWED_HOSTS` is empty, which is suitable for local development but must be configured for deployment.
 - SQLite and the existing migrations are ready: all migrations were applied and no migration operations are pending.
