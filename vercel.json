@@ -6,9 +6,11 @@
   "regions": ["iad1"],
   "functions": {
     "tourbazz_bd/wsgi.py": {
-      "maxDuration": 30
+      "maxDuration": 30,
+      "runtime": "python3.11"
     }
   },
+  "pythonVersion": "3.11",
   "routes": [
     {
       "src": "/static/(.*)",
