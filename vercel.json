@@ -1,7 +1,7 @@
 {
-  "buildCommand": "pip install -r requirements.txt && python manage.py collectstatic --noinput",
+  "buildCommand": "pip install setuptools>=68.0.0 && pip install -r requirements.txt && python manage.py collectstatic --noinput",
   "devCommand": "python manage.py runserver",
-  "installCommand": "pip install -r requirements.txt",
+  "installCommand": "pip install setuptools>=68.0.0 && pip install -r requirements.txt",
   "framework": "django",
   "regions": ["iad1"],
   "functions": {
@@ -28,7 +28,6 @@
   ],
   "env": {
     "DEBUG": "False",
-    "ALLOWED_HOSTS": ".vercel.app",
-    "PYTHON_VERSION": "3.11"
+    "ALLOWED_HOSTS": ".vercel.app"
   }
 }
